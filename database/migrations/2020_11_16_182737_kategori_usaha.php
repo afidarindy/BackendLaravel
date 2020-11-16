@@ -14,7 +14,10 @@ class KategoriUsaha extends Migration
     public function up()
     {
         Schema::create('kategoriUsaha', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->string('nama_kategori');
+            
+
             $table->timestamps();
         });
     }

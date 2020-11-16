@@ -10,7 +10,6 @@ class AkunUsaha extends Model
     protected $table ='akunUsaha';
 
     protected $fillable=[
-        'id_usaha',
         'nama_usaha',
         'deskripsi_usaha',
         'alamat_kota',
@@ -18,8 +17,13 @@ class AkunUsaha extends Model
         'alamat_lengkap',
         'email',
         'link_gmaps',
-        'foto_usaha'
+        'foto_usaha',
+        'password',
+        'id_kategori_usaha'
     ];
     
     use SoftDeletes;
+    public function kategoriUsaha(){
+        return $this->belongsTo('App\KategoriUsaha', 'id_kategori_usaha');
+    }
 }
