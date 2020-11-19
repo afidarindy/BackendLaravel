@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\PelamarKerja;
 use Illuminate\Http\Request;
+use App\AkunUsaha;
 
-class PelamarKerjaController extends Controller
+class AkunUsahaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class PelamarKerjaController extends Controller
      */
     public function index()
     {
-        $data = PelamarKerja::all();
+        $data = AkunUsaha::all();
         return view('', compact('data'));
     }
 
@@ -25,7 +25,7 @@ class PelamarKerjaController extends Controller
      */
     public function create()
     {
-        //
+        Produk::create($request->all());
     }
 
     /**
@@ -36,7 +36,7 @@ class PelamarKerjaController extends Controller
      */
     public function store(Request $request)
     {
-        Produk::create($request->all());
+        //
     }
 
     /**
@@ -68,9 +68,9 @@ class PelamarKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PelamarKerja $pelamarKerja)
+    public function update(Request $request, AkunUsaha $akunUsaha)
     {
-        return $pelamarKerja->update($request->all());
+        return $akunUsaha->update($request->all());
     }
 
     /**
@@ -79,8 +79,8 @@ class PelamarKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PelamarKerja $pelamarKerja)
+    public function destroy(AkunUsaha $akunUsaha)
     {
-        return $pelamarKerja->delete();
+        return $akunUsaha->delete();
     }
 }

@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::resource('/loker', 'LokerController');
 Route::resource('/pelamarKerja', 'PelamarKerjaController');
+Route::resource('/akunusaha', 'AkunUsahaController');
+Route::resource('/kategoriusaha', 'KategoriUsahaController');

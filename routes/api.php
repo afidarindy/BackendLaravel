@@ -18,4 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/getLoker', 'ApiController@getLoker');
+Route::get('/loker', 'ApiController@getLoker');
+Route::get('/akunUsaha', 'ApiController@getAkunUsaha');
+Route::get('/kategoriUsaha', 'ApiController@getKategoriUsaha');
+Route::get('/pelamarKerja', 'ApiController@getPelamarKerja');

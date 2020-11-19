@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class PelamarKerja extends Migration
+class AkunUsaha extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,18 @@ class PelamarKerja extends Migration
      */
     public function up()
     {
-        Schema::create('pelamarKerja', function (Blueprint $table) {
+        Schema::create('akunUsaha', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('nama');
+            $table->string('nama_usaha');
+            $table->string('deskripsi_usaha');
+            $table->string('alamat_kota');
+            $table->string('alamat_provinsi');
+            $table->string('alamat_lengkap');
             $table->string('email');
+            $table->string('link_gmaps');
+            $table->string('foto_usaha');
             $table->string('password');
-            $table->string('alamat');
-            $table->date('tanggal_lahir');
-            $table->enum('gender', ['L', 'P']);
-            $table->string('foto');
+            $table->string('id_kategori_usaha')->nullable();
             
             $table->softDeletes();
             $table->timestamps();
@@ -35,6 +38,6 @@ class PelamarKerja extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pelamarKerja');
+        Schema::dropIfExists('akunUsaha');
     }
 }

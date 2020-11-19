@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\PelamarKerja;
 use Illuminate\Http\Request;
+use App\KategoriUsaha;
 
-class PelamarKerjaController extends Controller
+class KategoriUsahaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class PelamarKerjaController extends Controller
      */
     public function index()
     {
-        $data = PelamarKerja::all();
+        $data = KategoriUsaha::all();
         return view('', compact('data'));
     }
 
@@ -25,7 +25,7 @@ class PelamarKerjaController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -68,9 +68,9 @@ class PelamarKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PelamarKerja $pelamarKerja)
+    public function update(Request $request, KategoriUsaha $kategoriUsaha)
     {
-        return $pelamarKerja->update($request->all());
+        return $kategoriUsaha->update($request->all());
     }
 
     /**
@@ -79,8 +79,8 @@ class PelamarKerjaController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PelamarKerja $pelamarKerja)
+    public function destroy(KategoriUsaha $kategoriUsaha)
     {
-        return $pelamarKerja->delete();
+        return $kategoriUsaha->delete();
     }
 }

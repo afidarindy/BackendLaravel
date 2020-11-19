@@ -36,7 +36,7 @@ class LokerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Produk::create($request->all());
     }
 
     /**
@@ -68,9 +68,9 @@ class LokerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Loker $loker)
     {
-        //
+        return $loker->update($request->all());
     }
 
     /**
@@ -79,8 +79,8 @@ class LokerController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Loker $loker)
     {
-        //
+        return $loker->delete();
     }
 }

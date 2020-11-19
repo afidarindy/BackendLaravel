@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Loker extends Model
 {
-    protected $table ='pelamarKerja';
+    protected $table ='loker';
 
     protected $fillable=[
         'judul_loker',
@@ -15,12 +15,12 @@ class Loker extends Model
         'persyaratan',
         'gaji',
         'tanggal_kadaluarsa',
-        'id_bidang_usaha',
+        'id_usaha',
     ];
 
     use SoftDeletes;
 
-    public function bidangUsaha(){
-        return $this->belongsTo('App\BidangUsaha', 'id_kategori');
+    public function akunUsaha(){
+        return $this->belongsTo('App\AkunUsaha', 'id_usaha');
     }
 }

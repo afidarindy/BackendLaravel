@@ -16,6 +16,7 @@ class PelamarKerja extends Model
         'tanggal_lahir',
         'alamat',
         'gender',
+        'foto',
     ];
 
     use SoftDeletes;

@@ -20,7 +20,7 @@ class Loker extends Migration
             $table->string('persyaratan');
             $table->unsignedBigInteger('gaji');
             $table->date('tanggal_kadaluarsa');
-            $table->unsignedBigInteger('id_bidang_usaha')->nullable();
+            $table->unsignedBigInteger('id_usaha')->nullable();
 
             $table->softDeletes();
             $table->timestamps();
