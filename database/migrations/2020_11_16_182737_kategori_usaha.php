@@ -17,7 +17,7 @@ class KategoriUsaha extends Migration
             $table->bigIncrements('id');
             $table->string('nama_kategori');
             
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }
