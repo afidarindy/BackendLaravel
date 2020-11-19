@@ -13,11 +13,11 @@ class KategoriUsaha extends Migration
      */
     public function up()
     {
-        Schema::create('kategoriUsaha', function (Blueprint $table) {
+        Schema::create('kategori_usaha', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_kategori');
             
-
+            $table->softDeletes();
             $table->timestamps();
         });
     }

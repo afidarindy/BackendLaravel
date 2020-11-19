@@ -13,7 +13,7 @@ class AkunUsaha extends Migration
      */
     public function up()
     {
-        Schema::create('akunUsaha', function (Blueprint $table) {
+        Schema::create('akun_usaha', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama_usaha');
             $table->string('deskripsi_usaha');

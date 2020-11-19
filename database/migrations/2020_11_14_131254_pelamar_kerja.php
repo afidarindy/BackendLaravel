@@ -13,7 +13,7 @@ class PelamarKerja extends Migration
      */
     public function up()
     {
-        Schema::create('pelamarKerja', function (Blueprint $table) {
+        Schema::create('pelamar_kerja', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('nama');
             $table->string('email');
