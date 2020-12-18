@@ -16,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::group(['middleware' => []],function(){ 
+    Route::group(['prefix'=>'user'], function(){
+        Route::get('/viewAdmin', 'UserController@index')->name('user.viewAdmin');
+        Route::get('/user.admin', 'UserController@admin')->name('user.admin');
+		Route::resource('user', 'UserController');
+    });
+    
+});
 
 Route::resource('/loker', 'LokerController');
 Route::resource('/pelamarKerja', 'PelamarKerjaController');

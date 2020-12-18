@@ -36,7 +36,7 @@ class PelamarKerjaController extends Controller
      */
     public function store(Request $request)
     {
-        Produk::create($request->all());
+        // Produk::create($request->all());
     }
 
     /**
